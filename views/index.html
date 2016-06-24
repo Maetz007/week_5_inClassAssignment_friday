@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>inClassAssignmentByLannyMaetzold</title>
+    <script src="vendors/angular.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </head>
+  <body>
+    <div ng-controller="studentData">
+
+    <h2>Brought to you in Psycedelic Smell-o-vision!!</h2><br>
+
+    <input type="text" name="name" value="" ng-model="studentNameInput" placeholder="--- Name ---"><br>
+    <input type="text" name="name" value="" ng-model="assignmentNumberInput" placeholder="-- Assignment # --"><br>
+    <input type="text" name="name" value="" ng-model="studentScoreInput" placeholder="--- Score ---"><br>
+    <input type="text" name="name" value="" ng-model="studentDateInput" placeholder="--- Date ---"><br><br>
+
+    <button ng-click="addStudent()">Add Student</button><br>
+    <button ng-click="displayStudent()">Show Students</button><br>
+
+    <ul>
+      <li ng-repeat="records in displayRecords"> {{records.student_name}} {{records.assignment_number}}  {{records.score}} {{records.date_completed}}</li>
+    </ul>
+
+    </div>
+  </body>
+</html>
